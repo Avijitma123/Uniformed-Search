@@ -13,16 +13,16 @@ using namespace std;
 class Node
 {
     public:
-    int n = 4;
-    int m = 4;
+    int n;
+    int m ;
     vector<vector<int>> vec;
-
-      
-    //Default constructor
-    Node()
+    //Constructor
+    Node(int n, int m)
     {
+        this->n = n;
+        this->m = m;
         //initialize the vector with 0
-        for(int i = 0; i < n; i++)
+         for(int i = 0; i < n; i++)
         {
             vector<int> temp;
             for(int j = 0; j < m; j++)
@@ -34,6 +34,24 @@ class Node
         
         
     }
+      
+    // //Default constructor
+    // Node()
+    // {
+    //     //initialize the vector with 0
+    //     for(int i = 0; i < n; i++)
+    //     {
+    //         vector<int> temp;
+    //         for(int j = 0; j < m; j++)
+    //         {
+    //             temp.push_back(0);
+    //         }
+    //         vec.push_back(temp);
+    //     }
+        
+        
+    // }
+
     //Using this method to put the queen at the given position
     void putQueen(int x, int y)
     {
@@ -166,10 +184,10 @@ void findSuccessor(Node node)
 
 
 //Tree Search
-void TreeSearch()
+void TreeSearch(int n, int m)
 {
     //Create the root node
-    Node node;
+    Node node(n, m);
     q.push(node);
     //while the queue is not empty
     while(!q.empty())
@@ -193,8 +211,11 @@ void TreeSearch()
 //Main function
 int main()
 {
+    int n, m;
+    cout<<"Enter the chess board size:"<<endl;
+    cin>>n>>m;
     //Call the TreeSearch function. Using BFS I am finding the solutions
-    TreeSearch();
+    TreeSearch(n, m);
     //Print the number of solutions
     cout<<"Number of solutions:"<<gq.size()<<endl;
     //Print the number of non-attacking solutions
