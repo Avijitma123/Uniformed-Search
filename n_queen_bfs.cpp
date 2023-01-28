@@ -15,6 +15,7 @@ class Node
     public:
     int n;
     int m ;
+    int row;
     vector<vector<int>> vec;
     //Constructor
     Node(int n, int m)
@@ -34,23 +35,12 @@ class Node
         
         
     }
+    void inCrementRow()
+    {
+        this->row++;
+    }
       
-    // //Default constructor
-    // Node()
-    // {
-    //     //initialize the vector with 0
-    //     for(int i = 0; i < n; i++)
-    //     {
-    //         vector<int> temp;
-    //         for(int j = 0; j < m; j++)
-    //         {
-    //             temp.push_back(0);
-    //         }
-    //         vec.push_back(temp);
-    //     }
-        
-        
-    // }
+    
 
     //Using this method to put the queen at the given position
     void putQueen(int x, int y)
@@ -130,7 +120,7 @@ bool isGoal(Node node)
             }
         }
     }
-    if(count == 4)
+    if(count == node.n)
     {
         return true;
     }
@@ -160,9 +150,8 @@ bool isRepeated(Node node)
 //Find the successor of the states
 void findSuccessor(Node node)
 {
-    //only put the queen if it is safe and the value is 0
-    for(int i = 0; i < node.n; i++)
-    {
+    
+        int i = node.row;
         for(int j = 0; j < node.m; j++)
         {
             //if the value is 0 and it is safe
@@ -173,13 +162,14 @@ void findSuccessor(Node node)
                 //check if the node is repeated
                 if(!isRepeated(temp))
                 {
+                    temp.row = i + 1;
                     q.push(temp);
                     nonAt.push(temp);
                 }
                 
             }
         }
-    }
+    
 }
 
 
@@ -188,6 +178,7 @@ void TreeSearch(int n, int m)
 {
     //Create the root node
     Node node(n, m);
+    node.row = 0;
     q.push(node);
     //while the queue is not empty
     while(!q.empty())
@@ -222,16 +213,16 @@ int main()
     cout<<"Number of non-attacking solutions:"<<nonAt.size()<<endl;
     //Display the solutions
     int count = 0;
-    while(!gq.empty())
-    {
-        count++;
-        cout<<"Solution "<<count<<endl;
-        Node temp = gq.front();
-        gq.pop();
-        temp.display();
+    // while(!gq.empty())
+    // {
+    //     count++;
+    //     cout<<"Solution "<<count<<endl;
+    //     Node temp = gq.front();
+    //     gq.pop();
+    //     temp.display();
         
-        cout<<"===================="<<endl;
-    }
+    //     cout<<"===================="<<endl;
+    // }
     // cout<<"===================="<<endl;
     // while(!nonAt.empty())
     // {
