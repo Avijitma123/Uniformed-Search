@@ -213,17 +213,7 @@ int main()
     cout<<"Number of non-attacking solutions:"<<nonAt.size()<<endl;
     //Display the solutions
     int count = 0;
-    // while(!gq.empty())
-    // {
-    //     count++;
-    //     cout<<"Solution "<<count<<endl;
-    //     Node temp = gq.front();
-    //     gq.pop();
-    //     temp.display();
-        
-    //     cout<<"===================="<<endl;
-    // }
-    // cout<<"===================="<<endl;
+   
     while(!nonAt.empty())
     {
         Node temp = nonAt.front();
