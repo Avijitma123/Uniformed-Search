@@ -203,7 +203,7 @@ void TreeSearch(int n, int m)
 int main()
 {
     int n, m;
-    cout<<"Enter the chess board size:"<<endl;
+    cout<<"Enter the chess board size in the format n x m"<<endl;
     cin>>n>>m;
     //Call the TreeSearch function. Using BFS I am finding the solutions
     TreeSearch(n, m);
@@ -224,13 +224,13 @@ int main()
     //     cout<<"===================="<<endl;
     // }
     // cout<<"===================="<<endl;
-    // while(!nonAt.empty())
-    // {
-    //     Node temp = nonAt.front();
-    //     nonAt.pop();
-    //     temp.display();
-    //     cout<<"===================="<<endl;
-    // }
+    while(!nonAt.empty())
+    {
+        Node temp = nonAt.front();
+        nonAt.pop();
+        temp.display();
+        cout<<"===================="<<endl;
+    }
     return 0;
 }
 
