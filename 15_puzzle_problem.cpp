@@ -174,35 +174,7 @@ class Board
         }
        
     }
-
-
-    /*=======================================================================*/
-    //get the position of the blank block
-    /*=======================================================================*/
-    vector<int> getBlank()
-    {
-        int x,y;
-        vector<int> temp;
-        for(int i = 0; i < n; i++)
-        {
-            for(int j = 0; j < n; j++)
-            {
-                if(vec[i][j] == 0)
-                {
-                    x = i;
-                    y = j;
-                }
-            }
-        }
-        
-        temp.push_back(x);
-        temp.push_back(y);
-        return temp;
-    }
-
-
-
-
+    
     /*=======================================================================*/
     //operator overload to check similarity of two state
     /*=======================================================================*/
@@ -280,9 +252,7 @@ bool inSucc(Board board)
 //Define a function to generate the successors
 void generateSuccessors(Board board,int n)
 {
-    // vector<int> temp = board.getBlank();
-    // int x = temp[0];
-    // int y = temp[1];
+   
     int x = board.blankX;
     int y = board.blankY;
     Board temp1 = copyBoard(board,n);
