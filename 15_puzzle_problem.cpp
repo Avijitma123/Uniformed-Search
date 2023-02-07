@@ -322,9 +322,9 @@ void Graph_search(int n)
             return;
         }
         else{
-              cout<<"Visited State: "<<endl;
-              temp.printState();
-              cout<<endl;
+            //   cout<<"Visited State: "<<endl;
+            //   temp.printState();
+             // cout<<endl;
                generateSuccessors(temp,n);
               visited.push_back(temp);
              
@@ -343,10 +343,19 @@ int main()
 {
     //Take the board size as input
     int n;
-    cout<<"Enter the board size: ";
+    cout<<"Enter the board size (3 for 8 puzzel and 4 for 15 puzzel ) : ";
     cin>>n;
     //call the Graph_search function
     Graph_search(n);
+
+    // //display the visited states
+    // cout<<"Visited States: "<<endl;
+    // for(list<Board>::iterator it = visited.begin(); it != visited.end(); it++)
+    // {
+    //     cout<<"=================="<<endl;
+    //     it->printState();
+    //     cout<<endl;
+    // }
 
     return 0;
 }
