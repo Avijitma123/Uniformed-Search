@@ -13,7 +13,7 @@ using namespace std;
 
 
 /*=====================================================*/
-/*Here I hvae define a class Board to store the state information*/
+/*Here I have defined a class board to store the state information.*/
 /*=====================================================*/
 class Board
 {
