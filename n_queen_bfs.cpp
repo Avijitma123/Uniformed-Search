@@ -205,9 +205,10 @@ int main()
     int n, m,num;
     cout<<"Enter the chess board size in the format n x m"<<endl;
     cin>>n>>m;
-    num = nonAt.size();
+    
     //Call the TreeSearch function. Using BFS I am finding the solutions
     TreeSearch(n, m);
+    num = nonAt.size();
     //Print the number of solutions
     cout<<"Number of solutions:"<<gq.size()<<endl;
     
