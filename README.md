@@ -52,5 +52,6 @@ Enter the goal state
 15
 4
 
+![Screenshot from 2023-03-30 10-12-41](https://user-images.githubusercontent.com/64518285/228731686-5287dc7f-713f-46ae-86a9-f4320c0d529e.png)
 
 
