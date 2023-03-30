@@ -7,7 +7,9 @@ In this repository, I have uploaded AI-related code. I used C++ programming to i
 
 
 Enter the board size (3 for 8 puzzel and 4 for 15 puzzel ) : 4
+
 Enter the initial state
+
 1
 2
 3
@@ -29,6 +31,7 @@ Enter the initial state
 0
 
 Enter the goal state
+
 1
 9
 2
