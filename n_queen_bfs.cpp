@@ -202,15 +202,15 @@ void TreeSearch(int n, int m)
 //Main function
 int main()
 {
-    int n, m;
+    int n, m,num;
     cout<<"Enter the chess board size in the format n x m"<<endl;
     cin>>n>>m;
+    num = nonAt.size();
     //Call the TreeSearch function. Using BFS I am finding the solutions
     TreeSearch(n, m);
     //Print the number of solutions
     cout<<"Number of solutions:"<<gq.size()<<endl;
-    //Print the number of non-attacking solutions
-    cout<<"Number of non-attacking solutions:"<<nonAt.size()<<endl;
+    
     //Display the solutions
     int count = 0;
    
@@ -221,6 +221,8 @@ int main()
         temp.display();
         cout<<"===================="<<endl;
     }
+    //Print the number of non-attacking solutions
+    cout<<"Number of non-attacking solutions:"<<num<<endl;
     return 0;
 }
 
