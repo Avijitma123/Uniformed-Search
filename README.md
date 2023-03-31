@@ -7,6 +7,7 @@ In this repository, I have uploaded AI-related code. I used C++ programming to i
 
 
 Enter the initial state
+
 2
 3
 6
@@ -28,6 +29,7 @@ Enter the initial state
 15
 
 Enter the goal state
+
 1
 2
 3
